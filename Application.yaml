@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: reproducer-03460076
+  namespace: openshift-gitops
+spec:
+  project: reproducer-03460076
+  revisionHistoryLimit: 5
+  destination:
+    name: in-cluster
+    namespace: reproducer-03460076
+  source:
+    path: .
+    repoURL: 'https://github.com/gmeghnag/03460076'
+    targetRevision: HEAD
+  syncPolicy: {}

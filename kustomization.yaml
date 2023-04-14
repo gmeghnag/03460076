@@ -6,3 +6,5 @@ resources:
 - ServiceAccount.yaml
 - ClusterRole.yaml
 - ClusterRoleBinding.yaml
+- Application.yaml
+- AppProject.yaml

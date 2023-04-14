@@ -7,9 +7,9 @@ Run the reproducer (it requires to have OpenShift GitOps installed):
 oc apply -k https://github.com/gmeghnag/03460076
 ~~~
 
-2. Binf the ClusterRole to the ServiceAccount:
+2. Bind the ClusterRole to the ServiceAccount:
 ~~~
-oc adm policy remove-cluster-role-from-user test-clusterrole -z test-sa -n reproducer-03460076
+oc adm policy add-cluster-role-to-user test-clusterrole -z test-sa -n reproducer-03460076
 ~~~
 
 3. See the `Subjects` field reported in the `DIFF` tab of the `ClusterRoleBinding` resource:
